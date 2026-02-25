@@ -1,0 +1,320 @@
+/* ================= GLOBAL RESET ================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+
+body {
+  background: #f4f6f9;
+  color: #1e293b;
+}
+
+/* ================= LAYOUT ================= */
+
+.layout-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* ================= SIDEBAR ================= */
+
+.sidebar {
+  width: 250px;
+  background: linear-gradient(180deg, #0f172a, #1e293b);
+  color: white;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: #cbd5e1;
+  margin-bottom: 12px;
+  padding: 12px 15px;
+  border-radius: 10px;
+  transition: 0.3s ease;
+  font-size: 15px;
+}
+
+.sidebar a:hover {
+  background: #2563eb;
+  color: white;
+}
+
+.active-link {
+  background: #2563eb;
+  color: white !important;
+}
+
+/* ================= MAIN CONTENT ================= */
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-content {
+  padding: 40px;
+  min-height: calc(100vh - 70px);
+}
+
+/* ================= TOPBAR ================= */
+
+.topbar {
+  height: 70px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 35px;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
+}
+
+.search-input {
+  padding: 8px 14px;
+  width: 300px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  outline: none;
+  transition: 0.2s ease;
+}
+
+.search-input:focus {
+  border-color: #2563eb;
+}
+
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logout-btn {
+  padding: 6px 14px;
+  background: #ef4444;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.logout-btn:hover {
+  background: #dc2626;
+}
+
+/* ================= DASHBOARD ================= */
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  margin-bottom: 35px;
+}
+
+.stat-card {
+  background: white;
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
+  transition: 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+.stat-card h3 {
+  font-size: 14px;
+  color: #64748b;
+  margin-bottom: 8px;
+}
+
+.stat-card h2 {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.stat-card.highlight {
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+  color: white;
+}
+
+/* ================= FORM CARDS ================= */
+
+.invoice-card {
+  background: white;
+  padding: 35px;
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
+  margin-bottom: 25px;
+}
+
+.invoice-card h3 {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+/* ================= INPUTS ================= */
+
+.invoice-card input,
+.invoice-card select {
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+  margin-right: 10px;
+  margin-bottom: 12px;
+  transition: 0.2s ease;
+  outline: none;
+}
+
+.invoice-card input:focus,
+.invoice-card select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+/* ================= BUTTONS ================= */
+
+.btn-primary {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(37, 99, 235, 0.3);
+}
+
+.btn-secondary {
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  padding: 9px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: #e2e8f0;
+}
+
+/* ================= AUTH PAGES ================= */
+
+.auth-wrapper {
+  display: flex;
+  min-height: 100vh;
+}
+
+.auth-left {
+  flex: 1;
+  background: linear-gradient(135deg, #2563eb, #1e3a8a);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 60px;
+}
+
+.auth-left h1 {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.auth-left p {
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+.auth-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f8fafc;
+}
+
+.auth-card {
+  width: 380px;
+  background: white;
+  padding: 40px;
+  border-radius: 18px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+.auth-card h2 {
+  margin-bottom: 25px;
+}
+
+.auth-card input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 18px;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+  outline: none;
+}
+
+.auth-card input:focus {
+  border-color: #2563eb;
+}
+
+.auth-card button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.auth-card button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(37, 99, 235, 0.3);
+}
+
+/* ================= TABLE STYLING ================= */
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.table th,
+.table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.table th {
+  background: #f8fafc;
+  font-weight: 600;
+}
+
+.table tr:hover {
+  background: #f1f5f9;
+}
